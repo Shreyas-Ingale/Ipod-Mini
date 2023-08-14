@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/Ipod-Mini/static/css/main.80bf0719.css",
+    "main.js": "/Ipod-Mini/static/js/main.74212d55.js",
+    "static/media/song3.mp3": "/Ipod-Mini/static/media/song3.18f3fe10c3461589407d.mp3",
+    "static/media/song2.mp3": "/Ipod-Mini/static/media/song2.505f2bb4e7d3fe71deb9.mp3",
+    "static/media/song1.mp3": "/Ipod-Mini/static/media/song1.c7491a6300d1da38ad66.mp3",
+    "static/media/gameGIF.gif": "/Ipod-Mini/static/media/gameGIF.c1f6fc4af8e41ec0da6a.gif",
+    "static/media/song2.png": "/Ipod-Mini/static/media/song2.1ebf29053621e2a51c47.png",
+    "static/media/wallpaper4.png": "/Ipod-Mini/static/media/wallpaper4.9cdb6083776f07bd43ef.png",
+    "static/media/song3.png": "/Ipod-Mini/static/media/song3.d251341542af0f06c40c.png",
+    "static/media/wallpaper1.png": "/Ipod-Mini/static/media/wallpaper1.450d4ffa77bb20b0d0e9.png",
+    "static/media/wallpaper2.png": "/Ipod-Mini/static/media/wallpaper2.1f6fdfb15874542a0bc6.png",
+    "static/media/wallpaper3.png": "/Ipod-Mini/static/media/wallpaper3.535fc6fb6c22c941870e.png",
+    "static/media/song1.png": "/Ipod-Mini/static/media/song1.f29a0aa9254f4fa74cd9.png",
+    "index.html": "/Ipod-Mini/index.html",
+    "main.80bf0719.css.map": "/Ipod-Mini/static/css/main.80bf0719.css.map",
+    "main.74212d55.js.map": "/Ipod-Mini/static/js/main.74212d55.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.80bf0719.css",
+    "static/js/main.74212d55.js"
+  ]
+}
