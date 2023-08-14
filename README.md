@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## About
 
-Ipod Mini. is a basic React App depicting the Ipod along with a Rotating Menu.
+[Ipod Mini.](https://shreyas-ingale.github.io/Ipod-Mini/) is a basic React App depicting the Ipod along with a Rotating Menu.
 
 ## Features
 
