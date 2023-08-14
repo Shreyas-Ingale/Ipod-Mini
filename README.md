@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+# Ipod Mini. React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## About
 
-In the project directory, you can run:
+Ipod Mini. is a basic React App depicting the Ipod along with a Rotating Menu.
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+-  Main Menu - Coverflow, Games, Music, Settings
+-  Coverflow 
+-  Games Menu - Shows a Game Display
+-  Music Menu
+   -  All Songs - Plays some Songs
+   -  Albums
+   -  Artists
+   -  Playlists
+-  Settings Menu
+   -  Change Wallpaper - Changes the screen wallpaper
+   -  Rotate - Rotates App between Potrait and Landscape views
+-  Select Button - Acts as ENTER Button
+-  Menu Button - To move back/forward in the Menu
+-  CIRCULAR SLIDING feature of the rotating pad to access the menu.
+   <br/>
+   <br/>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+##  Getting Started 
 
-### `npm test`
+-  Fork the Project in your Repository.
+-  Clone the Forked Repository in your Local System.
+-  Run 'npm install'.
+-  Run 'npm start'.
+-  Enjoy :)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+For any issues related to the project, raise an ISSUE in the respective Repository.
+<br/>
+<br/>
 
-### `npm run build`
+## Technologies Used
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<p align="justify">
+<img height="140" width="140" src="https://ik.imagekit.io/garbagevalue/garbage/tags/ReactJS_ne_91IZ6n.webp">
+<img height="140" width="140" src="https://user-images.githubusercontent.com/76626529/135654695-ca008e4f-99c8-40fc-9b73-8573f03c2867.png">
+<img height="140" width="140" src="https://www.w3.org/html/logo/downloads/HTML5_Logo_256.png">
+<img height="140" width="140" src="https://logodix.com/logo/470309.png">
+<img height="140" width="140" src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png">
+<img height="140" width="140" src="https://code.visualstudio.com/assets/apple-touch-icon.png">
+</p>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+-  Packages used:
+   -  react
+   -  react-dom
+   -  react-scripts
+   -  zingtouch
+   -  web-vitals
+-  Library: ReactJS
+-  Version Control System: Git
+-  VCS Hosting: GitHub
+-  Programming / Scripting: JavaScript
+-  Front-End: HTML, CSS
+-  Runtime Environment: NodeJS
+-  Integrated Development Environment: VSCode
+   <br/>
+   <br/>

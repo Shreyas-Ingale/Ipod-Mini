@@ -1,0 +1,392 @@
+/* -------------------------------------| BODY |-------------------------------------------- */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* background-image: url("./3624579.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed; */
+}
+
+.rotate-clockwise {
+  transform: rotateZ(90deg);
+}
+.rotate-anti-clockwise {
+  transform: rotateZ(-90deg);
+  -webkit-box-reflect: left 1px -webkit-linear-gradient(right, transparent 70%, white) !important;
+}
+
+/* -------------------------------------| APP |-------------------------------------------- */
+
+@keyframes rotor-pod {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+.App {
+  position: relative;
+  width: min-content;
+  margin: 5vh auto;
+  padding: 10px 10px;
+  border: 2px solid goldenrod;
+  border-radius: 20px;
+  background: url("https://images.alphacoders.com/266/266061.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: inset 0px 0px 12px 2px black;
+  transition: all ease-in-out 0.2s;
+  animation-name: rotor-pod;
+  animation-duration: 0.8s;
+  animation-iteration-count: 1;
+  animation-play-state: running;
+  animation-timing-function: ease;
+  -webkit-box-reflect: below 1px -webkit-linear-gradient(transparent 70%, white);
+}
+
+/* -------------------------------------| Display |-------------------------------------------- */
+
+.display-container {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  border: 3px solid gray;
+  border-radius: inherit;
+  background-color: aliceblue;
+  overflow: hidden;
+  text-align: end; /* remove */
+}
+
+.display-menu {
+  width: 0;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  overflow-x: hidden;
+  background-color: white;
+  transition: all 0.4s ease;
+  transition: opacity 0.45s ease;
+  opacity: 0;
+  z-index: 5;
+  & div:not(:first-child) {
+    padding: 0 5px;
+  }
+}
+
+.width-50 {
+  opacity: 1;
+  width: 50% !important;
+  box-shadow: 0px 0px 15px 2px rgb(142, 142, 142) !important;
+}
+
+.display-menu div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 20%;
+  box-sizing: border-box;
+}
+
+.display-menu .menu-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  /* text-wrap: balance; */
+}
+.display-menu .menu-content span {
+  text-align: start;
+}
+
+.display-menu .selected {
+  background-color: rgb(58, 58, 155);
+  color: white;
+}
+
+.display-menu .menu-heading {
+  background-color: goldenrod;
+  color: white;
+  font-size: large;
+}
+
+/* -------------------------------------| CONTROLLER |-------------------------------------------- */
+
+.controller-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 10px auto;
+  border: 2px solid gray;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all ease-in-out 0.2s;
+  background-color: lightgray;
+  /* box-shadow: inset 0px 0px 5px 0px black; */
+}
+
+.controller-container button {
+  opacity: 0.8;
+  transition: all 0.1s ease-in-out;
+  &:hover {
+    opacity: 1;
+  }
+  &:active {
+    transform: scale(0.96);
+  }
+}
+
+.select-btn {
+  position: absolute;
+  width: 45%;
+  height: 45%;
+  border: none;
+  outline: none;
+  border-radius: inherit;
+  background-color: gray;
+  color: aliceblue;
+  cursor: pointer;
+}
+
+.menu-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 5px;
+  width: fit-content;
+  font-size: 40px;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  color: rgb(78, 78, 78);
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.forward-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 2px;
+  width: fit-content;
+  font-size: 37px;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  color: rgb(78, 78, 78);
+  cursor: pointer;
+}
+
+.action-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 73px;
+  bottom: 0px;
+  width: fit-content;
+  font-size: 43px;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  color: rgb(78, 78, 78);
+  cursor: pointer;
+}
+
+.backward-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 2px;
+  width: fit-content;
+  font-size: 37px;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  color: rgb(78, 78, 78);
+  cursor: pointer;
+}
+
+/* ------------------------------------| INDIVIDUAL SCREENS |---------------------------------------- */
+
+.normal-screen {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  text-align: center;
+
+  & h1 {
+    margin: 0;
+    color: rgb(78, 78, 78);
+  }
+
+  & div {
+    font-size: 100px;
+    color: rgb(58, 58, 155);
+  }
+}
+
+.coverflow-icon {
+  & div i::before {
+    -webkit-box-reflect: below -13px -webkit-linear-gradient(
+        top,
+        transparent,
+        rgba(255, 255, 255, 0.4)
+      );
+  }
+}
+
+.album-icon {
+  & div i::before {
+    -webkit-box-reflect: below 4px -webkit-linear-gradient(top, transparent, rgba(255, 255, 255, 0.4));
+  }
+}
+
+.artist-icon {
+  & div i::before {
+    -webkit-box-reflect: below -21px -webkit-linear-gradient(
+        top,
+        transparent,
+        rgba(255, 255, 255, 0.4)
+      );
+  }
+}
+
+.playlist-icon {
+  & div i::before {
+    -webkit-box-reflect: below -9px -webkit-linear-gradient(
+        top,
+        transparent,
+        rgba(255, 255, 255, 0.4)
+      );
+  }
+}
+
+.about-screen {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  text-align: center;
+
+  & h1 {
+    margin: 0;
+    color: rgb(78, 78, 78);
+  }
+
+  & div {
+    & p {
+      font-size: larger;
+      color: rgb(78, 78, 78);
+      & strong {
+        color: rgb(55, 55, 189);
+      }
+    }
+
+    & a{
+      color: rgb(55, 55, 189);
+    }
+
+    & i {
+      font-size: 75px;
+      opacity: 0.8;
+      transition: all 0.2s ease;
+      &:hover{
+        opacity: 1;
+      }
+      &::before {
+        -webkit-box-reflect: below 0px -webkit-linear-gradient(top, transparent, rgba(255, 255, 255, 0.4));
+      }
+    }
+  }
+}
+
+.music-screen{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+  z-index: 1;
+  
+  & .blur-div{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: blur(10px) brightness(0.7);
+    z-index: -1;
+  }
+
+  & h1 {
+    margin: 0;
+    color: mintcream;
+  }
+
+  & img{
+    width: 40%;
+    height: 40%;
+    margin: 0;
+    border-radius: 20px;
+  }
+
+  & p{
+    margin: 0;
+    color: white;
+    font-size: large;
+    font-weight: 500;
+  }
+
+  & audio {
+    width: 95%;
+    height: 15%;
+    
+  }
+
+  & #audio::-webkit-media-controls-play-button {
+    display: none !important;
+  }
+
+  & #audio::-webkit-media-controls-current-time-display{
+    margin-left: -2px;
+    margin-right: -1px;
+  }
+
+  & #audio::-webkit-media-controls-timeline {
+    width: 45%;
+    margin-left: -10px;
+    margin-right: -15px;
+  }
+
+  & #audio::-webkit-media-controls-mute-button{
+    margin-right: -4px;
+  }
+}
