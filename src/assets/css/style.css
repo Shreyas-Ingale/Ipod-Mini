@@ -137,12 +137,14 @@ body {
   align-items: center;
   transition: all ease-in-out 0.2s;
   background-color: lightgray;
+  z-index: 1;
   /* box-shadow: inset 0px 0px 5px 0px black; */
 }
 
 .controller-container button {
   opacity: 0.8;
   transition: all 0.1s ease-in-out;
+  z-index: 2;
   &:hover {
     opacity: 1;
   }
