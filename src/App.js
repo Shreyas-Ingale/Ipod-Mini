@@ -5,6 +5,7 @@ import Display from "./components/Display";
 import Controller from "./components/Controller";
 import songs from "./assets/songs/songs"; // importing songs used
 import { posters, wallpapers } from "./assets/images/images"; // importing images used
+import ErrorBoundary from "./components/ErrorBoundary"; //importing ErrorBoundary to handle errors
 
 class App extends React.Component {
   constructor() {
@@ -46,7 +47,7 @@ class App extends React.Component {
         if (this.currAngle > 60) {
           this.tempSelectedItem++;
           // this keeps it within range of the possible menu items
-          this.tempSelectedItem %= this.state.currMenuContent.length; 
+          this.tempSelectedItem %= this.state.currMenuContent.length;
           this.setState({
             selectedItem: this.tempSelectedItem
           })
@@ -139,7 +140,7 @@ class App extends React.Component {
       else if (currMenu === 'Settings') {
         if (selectedItem === 0) { // here wallpaper is changed
           wallpapers.id++
-          if(wallpapers.id === wallpapers.images.length){
+          if (wallpapers.id === wallpapers.images.length) {
             wallpapers.id = 0;
           }
           this.setState({
@@ -227,7 +228,7 @@ class App extends React.Component {
 
   handleAudioEnded = () => {
     // used to change the play icon to pause when the song ends naturally
-    let{ songDetails } = this.state;
+    let { songDetails } = this.state;
     songDetails.isPlaying = false;
     this.setState({
       songDetails
@@ -238,23 +239,28 @@ class App extends React.Component {
     const { currMenuContent, selectedItem, pageToRender, songDetails, wallpapers } = this.state
     return (
       <div className="App">
-        < Display
-          wallpapers={wallpapers}
-          menuContent={currMenuContent}
-          selectedItem={selectedItem}
-          pageToRender={pageToRender}
-          songDetails={songDetails}
-          handleActionButton={this.handleActionButton}
-          handleAudioEnded={this.handleAudioEnded}
-        />
-        < Controller
-          handleMenuButton={this.handleMenuButton}
-          handleSelectButton={this.handleSelectButton}
-          handleActionButton={this.handleActionButton}
-          handleForwardButton={this.handleForwardButton}
-          handleBackwardButton={this.handleBackwardButton}
-          isSongPlaying={songDetails.isPlaying}
-        />
+        <ErrorBoundary>
+          < Display
+            wallpapers={wallpapers}
+            menuContent={currMenuContent}
+            selectedItem={selectedItem}
+            pageToRender={pageToRender}
+            songDetails={songDetails}
+            handleActionButton={this.handleActionButton}
+            handleAudioEnded={this.handleAudioEnded}
+          />
+        </ErrorBoundary>
+        <ErrorBoundary>
+          < Controller
+            handleMenuButton={this.handleMenuButton}
+            handleSelectButton={this.handleSelectButton}
+            handleActionButton={this.handleActionButton}
+            handleForwardButton={this.handleForwardButton}
+            handleBackwardButton={this.handleBackwardButton}
+            isSongPlaying={songDetails.isPlaying}
+          />
+        </ErrorBoundary>
+
       </div>
     );
   }
